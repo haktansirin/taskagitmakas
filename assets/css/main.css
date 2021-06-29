@@ -389,6 +389,11 @@ body {
   opacity: 1;
   visibility: visible;
 }
+@media (max-width: 1200px) {
+  .game-over-content {
+    transform: scale(0.65) translateY(-50px) !important;
+  }
+}
 
 .play-again {
   position: absolute;

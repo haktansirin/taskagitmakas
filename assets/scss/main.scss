@@ -265,6 +265,12 @@ body {
       visibility: visible;
     }
   }
+
+  @media (max-width: $lg) {
+    &-content {
+      transform: scale(0.65) translateY(-50px) !important;
+    }
+  }
 }
 
 .play-again {
