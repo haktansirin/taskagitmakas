@@ -113,24 +113,44 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   z-index: 4;
+
+  @media (max-width: $lg) {
+    top: auto;
+    bottom: 0;
+  }
 }
 
 .username {
-  font-size: 24px;
+  font-size: 16px;
+
+  @media (min-width: $lg) {
+    font-size: 24px;
+  }
 }
 
 .score {
   @include verticalAlign();
   gap: 50px;
-  font-size: 24px;
+  font-size: 16px;
   background-color: $dark-color;
-  border-radius: 100px;
-  padding: 30px 60px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  padding: 20px 35px 10px;
 
   &-content {
     color: $white-color;
-    font-size: 40px;
+    font-size: 20px;
     font-weight: 700;
+  }
+
+  @media (min-width: $lg) {
+    font-size: 24px;
+    border-radius: 100px;
+    padding: 30px 60px;
+
+    &-content {
+      font-size: 40px;
+    }
   }
 }
 
@@ -180,8 +200,8 @@ body {
   }
 
   @media (max-width: $lg) {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
   }
 }
 

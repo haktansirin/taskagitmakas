@@ -112,6 +112,9 @@ ul li {
     font-size: 14px;
     padding: 10px 20px;
   }
+  .button-primary-icon {
+    font-size: 20px;
+  }
 }
 
 .validation-message {
@@ -233,24 +236,46 @@ body {
   padding-right: 15px;
   z-index: 4;
 }
+@media (max-width: 1200px) {
+  .game-area-header {
+    top: auto;
+    bottom: 0;
+  }
+}
 
 .username {
-  font-size: 24px;
+  font-size: 16px;
+}
+@media (min-width: 1200px) {
+  .username {
+    font-size: 24px;
+  }
 }
 
 .score {
   display: flex;
   align-items: center;
   gap: 50px;
-  font-size: 24px;
+  font-size: 16px;
   background-color: #000000;
-  border-radius: 100px;
-  padding: 30px 60px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  padding: 20px 35px 10px;
 }
 .score-content {
   color: #ffffff;
-  font-size: 40px;
+  font-size: 20px;
   font-weight: 700;
+}
+@media (min-width: 1200px) {
+  .score {
+    font-size: 24px;
+    border-radius: 100px;
+    padding: 30px 60px;
+  }
+  .score-content {
+    font-size: 40px;
+  }
 }
 
 .game-area-content {
@@ -302,8 +327,8 @@ body {
 }
 @media (max-width: 1200px) {
   .option {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
   }
 }
 

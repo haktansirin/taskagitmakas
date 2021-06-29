@@ -28,6 +28,10 @@
   @media (max-width: $md) {
     font-size: 14px;
     padding: 10px 20px;
+
+    &-icon {
+      font-size: 20px;
+    }
   }
 }
 
