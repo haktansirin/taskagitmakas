@@ -217,6 +217,18 @@ body {
   transition: 0.3s all;
   transition-delay: 1s;
 }
+.game-area-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: #ffffff;
+  z-index: -1;
+}
 .game-area-page.visible {
   opacity: 1;
   visibility: visible;
@@ -283,11 +295,6 @@ body {
   justify-content: center;
   align-items: center;
   width: 50%;
-}
-.game-area-content:nth-child(2) {
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
-  background-color: #ffffff;
 }
 
 .options {

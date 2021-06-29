@@ -95,6 +95,19 @@ body {
   transition: $transition-base;
   transition-delay: 1s;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: $white-color;
+    z-index: -1;
+  }
+
   &.visible {
     opacity: 1;
     visibility: visible;
@@ -157,12 +170,6 @@ body {
 .game-area-content {
   @include centerAlign();
   width: 50%;
-
-  &:nth-child(2) {
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-    background-color: $white-color;
-  }
 }
 
 .options {
