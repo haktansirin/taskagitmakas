@@ -107,6 +107,12 @@ ul li {
 .button-primary:hover .button-primary-icon {
   transform: translate(0);
 }
+@media (max-width: 768px) {
+  .button-primary {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
 
 .validation-message {
   display: none;
@@ -133,7 +139,7 @@ body {
 }
 @media (max-width: 1200px) {
   .logo {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 
@@ -178,8 +184,11 @@ body {
   width: 100%;
 }
 @media (max-width: 1200px) {
+  .welcome-page {
+    gap: 20px;
+  }
   .welcome-page-banner img {
-    max-width: 150px;
+    max-width: 120px;
   }
 }
 

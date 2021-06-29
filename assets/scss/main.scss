@@ -17,7 +17,7 @@ body {
   text-align: center;
 
   @media (max-width: $lg) {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 
@@ -62,9 +62,10 @@ body {
   }
 
   @media (max-width: $lg) {
+    gap: 20px;
     &-banner {
       img {
-        max-width: 150px;
+        max-width: 120px;
       }
     }
   }

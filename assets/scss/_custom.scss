@@ -24,6 +24,11 @@
       transform: translate(0);
     }
   }
+
+  @media (max-width: $md) {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
 }
 
 .validation-message {
