@@ -76,6 +76,10 @@ ul li {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-mobile:before {
+  content: "";
+}
+
 .icon-play:before {
   content: "";
 }
@@ -410,4 +414,38 @@ body {
 }
 .play-again:hover {
   transform: translateX(-50%) scale(1.05) rotate(360deg);
+}
+
+.device-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: #fed106;
+  z-index: 5;
+}
+.device-message-icon {
+  font-size: 124px;
+  transform: rotate(0);
+  opacity: 0;
+  animation: device 2s ease-in-out infinite;
+}
+@media (orientation: landscape) {
+  .device-message {
+    display: none;
+  }
+}
+
+@keyframes device {
+  to {
+    opacity: 1;
+    transform: rotate(90deg);
+  }
 }
