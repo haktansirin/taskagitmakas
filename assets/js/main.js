@@ -45,7 +45,8 @@ function morePlay() {
   if (usernameInputVal === "") {
     validate("error", "Oops! Boş geçilemez.");
   } else {
-    gameAreaPage.classList.remove("hide");
+    gameAreaPage.classList.add("visible");
+    usernamePage.classList.add("hide");
     playerName.innerHTML = usernameInputVal;
   }
 }

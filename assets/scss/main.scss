@@ -8,17 +8,24 @@
 body {
   color: $text-color;
   font-family: $font-family;
+  background-color: $primary-color;
   overflow: hidden;
 }
 
 .logo {
   font-size: 34px;
+  text-align: center;
+
+  @media (max-width: $lg) {
+    font-size: 24px;
+  }
 }
 
 .page {
   position: absolute;
   width: 100%;
   height: 100%;
+  transform: translateX(0);
   background-color: $primary-color;
   transition: $transition-base;
 
@@ -28,6 +35,7 @@ body {
   }
 
   &.hide {
+    transform: translateX(-100%);
     opacity: 0;
     visibility: hidden;
   }
@@ -41,13 +49,23 @@ body {
 
 .welcome-page {
   gap: 50px;
+  transition-delay: 0.3s;
 
   &-banner {
-    @include verticalAlign();
+    @include centerAlign();
+    flex-wrap: wrap;
 
     img {
       max-width: 300px;
       width: 100%;
+    }
+  }
+
+  @media (max-width: $lg) {
+    &-banner {
+      img {
+        max-width: 150px;
+      }
     }
   }
 }
@@ -55,6 +73,7 @@ body {
 .username-page {
   gap: 30px;
   z-index: 2;
+  transition-delay: 0.6s;
 
   input {
     max-width: 100%;
@@ -70,6 +89,15 @@ body {
 .game-area-page {
   display: flex;
   z-index: 3;
+  opacity: 0;
+  visibility: hidden;
+  transition: $transition-base;
+  transition-delay: 1s;
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .game-area-header {
@@ -81,6 +109,8 @@ body {
   transform: translateX(-50%);
   max-width: 1200px;
   width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
   z-index: 4;
 }
 
@@ -115,8 +145,13 @@ body {
 }
 
 .options {
-  @include verticalAlign();
+  @include centerAlign();
+  flex-wrap: wrap;
   gap: 50px;
+
+  @media (max-width: $md) {
+    gap: 30px;
+  }
 }
 
 .option {
@@ -141,6 +176,11 @@ body {
     img {
       width: 70%;
     }
+  }
+
+  @media (max-width: $lg) {
+    width: 100px;
+    height: 100px;
   }
 }
 
